@@ -62,15 +62,24 @@ export default MyEmitterComponent;
 
 A hook to listen for a custom event.
 
-| Param     | Type   | Nullable | Desc                                |
-| --------- | ------ | -------- | ----------------------------------- |
-| eventName | string | &cross;  | The name of the event to listen for |
-| eventName | string | &cross;  | The name of the event to listen for |
+| Param     | Type     | Nullable | Desc                                            |
+| --------- | -------- | -------- | ----------------------------------------------- |
+| eventName | string   | &cross;  | The name of the event to listen for             |
+| handler   | Function | &cross;  | The function to call when the event is emitted. |
 
-eventName: The name of the event to listen for.
-handler: The function to call when the event is emitted.
-eventEmit(eventName: string, data: any)
+### eventEmit
+
 A function to emit a custom event.
 
-eventName: The name of the event to emit.
-data: The data to pass to the event handler.
+| Param     | Type   | Nullable | Desc                                   |
+| --------- | ------ | -------- | -------------------------------------- |
+| eventName | string | &cross;  | The name of the event to emit.         |
+| data      | any    | &cross;  | The data to pass to the event handler. |
+
+## Contribution
+
+Contributions are welcome! Please open an issue or submit a pull request on GitHub.
+
+## License
+
+This project is licensed under the MIT License.
