@@ -1,0 +1,64 @@
+{
+  "name": "mitt-react",
+  "private": false,
+  "version": "1.0.0",
+  "description": "Lightweight utility for integrating mitt with React",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/mitt-react.umd.js",
+  "module": "./dist/mitt-react.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/mitt-react.es.js",
+      "require": "./dist/mitt-react.umd.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/svnrnns/mitt-react"
+  },
+  "keywords": [
+    "react",
+    "react-hooks",
+    "event-emitter",
+    "mitt",
+    "event-management",
+    "react-events",
+    "event-subscription",
+    "event-handling",
+    "react-functional-components",
+    "mitt-integration",
+    "event-listener-hook",
+    "react-utility",
+    "react-event-emitter",
+    "event-emitters-in-react",
+    "react-hook-for-events",
+    "event-management-library"
+  ],
+  "bugs": {
+    "url": "https://github.com/svnrnns/mitt-react/issues"
+  },
+  "homepage": "https://github.com/svnrnns/mitt-react",
+  "author": "seven rings (https://twitter.com/svnrnns)",
+  "scripts": {
+    "dev": "vite build --watch",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "mitt": "^3.0.1",
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0"
+  },
+  "devDependencies": {
+    "vite": "^5.2.11"
+  },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "4.9.5"
+  }
+}
