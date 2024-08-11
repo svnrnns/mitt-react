@@ -1,5 +1,5 @@
 import emitter from './emitter';
 
-export function eventEmit(eventName, data) {
+export function useEventEmit(eventName, data) {
   emitter.emit(eventName, data);
 }

@@ -1,2 +1,6 @@
-export { useEventListener } from './useEventListener';
-export { eventEmit } from './eventEmit';
+import { useEventEmit } from './useEventEmit';
+import { useEventListener } from './useEventListener';
+
+const eventEmit = useEventEmit;
+
+export { useEventEmit, useEventListener, eventEmit };
