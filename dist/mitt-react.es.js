@@ -1,5 +1,5 @@
-import { useCallback as c, useEffect as u } from "react";
-function r(t) {
+import { useCallback as f, useEffect as u } from "react";
+function s(t) {
   return { all: t = t || /* @__PURE__ */ new Map(), on: function(i, e) {
     var n = t.get(i);
     n ? n.push(e) : t.set(i, [e]);
@@ -15,17 +15,19 @@ function r(t) {
     });
   } };
 }
-const f = r();
-function m(t, i) {
-  const e = c(i, [i]);
-  u(() => (f.on(t, e), () => {
-    f.off(t, e);
-  }), [t, e]);
+const c = s();
+function r(t, i) {
+  c.emit(t, i);
 }
 function a(t, i) {
-  f.emit(t, i);
+  const e = f(i, [i]);
+  u(() => (c.on(t, e), () => {
+    c.off(t, e);
+  }), [t, e]);
 }
+const l = r;
 export {
-  a as eventEmit,
-  m as useEventListener
+  l as eventEmit,
+  r as useEventEmit,
+  a as useEventListener
 };
