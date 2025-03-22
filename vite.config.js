@@ -1,25 +1,28 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import path from 'path';
-
-const packagename = 'mitt-react';
+import dts from "vite-plugin-dts";
+import react from "@vitejs/plugin-react";
+import { defineConfig } from "vite";
 
 export default defineConfig({
+  plugins: [
+    react(),
+    dts({
+      insertTypesEntry: true,
+    }),
+  ],
   build: {
     lib: {
-      entry: path.resolve(__dirname, 'src/index.js'),
-      name: packagename,
-      fileName: (format) => `${packagename}.${format}.js`,
+      entry: "src/index.ts",
+      fileName: (format) => `mitt-react.${format === "es" ? "js" : "cjs"}`,
+      formats: ["es", "cjs"],
     },
     rollupOptions: {
-      external: ['react', 'react-dom'],
+      external: ["react", "react-dom"],
       output: {
         globals: {
-          react: 'React',
-          'react-dom': 'ReactDOM',
+          react: "React",
+          "react-dom": "ReactDOM",
         },
       },
     },
   },
-  plugins: [react()],
 });
