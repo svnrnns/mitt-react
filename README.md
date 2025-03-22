@@ -17,13 +17,13 @@ npm install mitt-react
 The `useEventListener` hook allows you to listen to custom events in your React components.
 
 ```jsx
-import React, { useState } from 'react';
-import { useEventListener } from 'mitt-react';
+import React, { useState } from "react";
+import { useEventListener } from "mitt-react";
 
 const MyComponent = () => {
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState("");
 
-  useEventListener('customEvent', (data) => {
+  useEventListener("customEvent", (data) => {
     setMessage(data);
   });
 
@@ -42,12 +42,12 @@ export default MyComponent;
 The `useEventEmit` function allows you to emit custom events.
 
 ```jsx
-import React from 'react';
-import { useEventEmit } from 'mitt-react';
+import React from "react";
+import { useEventEmit } from "mitt-react";
 
 const MyEmitterComponent = () => {
   const handleClick = () => {
-    useEventEmit('customEvent', 'Hello, World!');
+    useEventEmit("customEvent", "Hello, World!");
   };
 
   return <button onClick={handleClick}>Emit Event</button>;
@@ -75,6 +75,21 @@ A function to emit a custom event.
 | --------- | ------ | -------- | -------------------------------------- |
 | eventName | string | &cross;  | The name of the event to emit.         |
 | data      | any    | &cross;  | The data to pass to the event handler. |
+
+### Types
+
+These types can be imported this way:
+
+```js
+import type { EventMap } from "mitt-vue";
+```
+
+Here is the list of types used in the package.
+
+```ts
+export type EventMap = Record<EventType, unknown>;
+export type EventCallback = (...args: any[]) => void;
+```
 
 ## Contribution
 
