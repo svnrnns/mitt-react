@@ -1,18 +1,21 @@
 {
   "name": "mitt-react",
   "private": false,
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Lightweight utility for integrating mitt with React",
   "license": "MIT",
   "type": "module",
-  "main": "./dist/mitt-react.umd.js",
-  "module": "./dist/mitt-react.es.js",
+  "main": "dist/mitt-react.cjs",
+  "module": "dist/mitt-react.js",
+  "types": "dist/index.d.ts",
   "exports": {
-    ".": {
-      "import": "./dist/mitt-react.es.js",
-      "require": "./dist/mitt-react.umd.js"
-    }
+    "import": "./dist/mitt-react.js",
+    "require": "./dist/mitt-react.cjs",
+    "types": "./dist/index.d.ts"
   },
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/svnrnns/mitt-react"
