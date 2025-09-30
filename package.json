@@ -63,7 +63,7 @@
   "devDependencies": {
     "@types/react": "^19.0.12",
     "typescript": "^5.8.2",
-    "vite": "^5.2.11",
+    "vite": "^7",
     "vite-plugin-dts": "^2.3.0"
   },
   "optionalDependencies": {
