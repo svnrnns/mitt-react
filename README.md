@@ -37,17 +37,17 @@ const MyComponent = () => {
 export default MyComponent;
 ```
 
-### useEventEmit (function)
+### useEventEmit / eventEmit (function)
 
-The `useEventEmit` function allows you to emit custom events.
+The `eventEmit` function allows you to emit custom events.
 
 ```jsx
 import React from "react";
-import { useEventEmit } from "mitt-react";
+import { eventEmit } from "mitt-react";
 
 const MyEmitterComponent = () => {
   const handleClick = () => {
-    useEventEmit("customEvent", "Hello, World!");
+    eventEmit("customEvent", "Hello, World!");
   };
 
   return <button onClick={handleClick}>Emit Event</button>;
@@ -67,7 +67,7 @@ A hook to listen for a custom event.
 | eventName | string   | &cross;  | The name of the event to listen for             |
 | handler   | Function | &cross;  | The function to call when the event is emitted. |
 
-### useEventEmit
+### useEventEmit / eventEmit
 
 A function to emit a custom event.
 
