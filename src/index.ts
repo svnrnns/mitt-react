@@ -1,5 +1,5 @@
-import { useEventEmit } from "./useEventEmit";
-import { useEventListener } from "./useEventListener";
+import { useEventEmit } from "./use-event-emit";
+import { useEventListener } from "./use-event-listener";
 
 const eventEmit = useEventEmit;
 
